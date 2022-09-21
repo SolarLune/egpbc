@@ -26,7 +26,11 @@ func main() {
         fmt.Println("The A Button was pressed.")
     }
 
-    if ebiten.IsStandardGamepad
+    lsX := ebiten.StandardGamepadAxisValue(0, xbox.LeftStickX)
+	lsY := ebiten.StandardGamepadAxisValue(0, xbox.LeftStickY)
+
+    isLeftPressed := egpbc.AxisIsLeft(lsX)
+    fmt.Println("left is pressed: ", isLeftPressed)
 
 }
 

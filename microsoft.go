@@ -23,11 +23,6 @@ type microsoftConstantDefinition struct {
 	LeftStickY  ebiten.StandardGamepadAxis
 	RightStickX ebiten.StandardGamepadAxis
 	RightStickY ebiten.StandardGamepadAxis
-
-	StickLeft  int
-	StickRight int
-	StickUp    int
-	StickDown  int
 }
 
 func (cs microsoftConstantDefinition) ButtonCodeFromString(buttonCode string) ebiten.StandardGamepadButton {
@@ -182,9 +177,4 @@ var MicrosoftConstants = microsoftConstantDefinition{
 	LeftStickY:  ebiten.StandardGamepadAxisLeftStickVertical,
 	RightStickX: ebiten.StandardGamepadAxisRightStickHorizontal,
 	RightStickY: ebiten.StandardGamepadAxisRightStickVertical,
-
-	StickLeft:  -1,
-	StickRight: 1,
-	StickUp:    -1,
-	StickDown:  1,
 }

@@ -26,11 +26,6 @@ type sonyConstantDefinition struct {
 	LeftStickY  ebiten.StandardGamepadAxis
 	RightStickX ebiten.StandardGamepadAxis
 	RightStickY ebiten.StandardGamepadAxis
-
-	StickLeft  int
-	StickRight int
-	StickUp    int
-	StickDown  int
 }
 
 func (cs sonyConstantDefinition) ButtonCodeFromString(buttonCode string) ebiten.StandardGamepadButton {
@@ -185,9 +180,4 @@ var SonyConstants = sonyConstantDefinition{
 	LeftStickY:  ebiten.StandardGamepadAxisLeftStickVertical,
 	RightStickX: ebiten.StandardGamepadAxisRightStickHorizontal,
 	RightStickY: ebiten.StandardGamepadAxisRightStickVertical,
-
-	StickLeft:  -1,
-	StickRight: 1,
-	StickUp:    -1,
-	StickDown:  1,
 }

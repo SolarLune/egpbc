@@ -23,11 +23,6 @@ type nintendoConstantDefinition struct {
 	LeftStickY  ebiten.StandardGamepadAxis
 	RightStickX ebiten.StandardGamepadAxis
 	RightStickY ebiten.StandardGamepadAxis
-
-	StickLeft  int
-	StickRight int
-	StickUp    int
-	StickDown  int
 }
 
 func (cs nintendoConstantDefinition) ButtonCodeFromString(buttonCode string) ebiten.StandardGamepadButton {
@@ -180,9 +175,4 @@ var NintendoConstants = nintendoConstantDefinition{
 	LeftStickY:  ebiten.StandardGamepadAxisLeftStickVertical,
 	RightStickX: ebiten.StandardGamepadAxisRightStickHorizontal,
 	RightStickY: ebiten.StandardGamepadAxisRightStickVertical,
-
-	StickLeft:  -1,
-	StickRight: 1,
-	StickUp:    -1,
-	StickDown:  1,
 }
