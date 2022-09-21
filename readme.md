@@ -10,22 +10,20 @@ egpbc is named constants for Nintendo, Sony, and Xbox game console controllers f
 
 # How to use
 
-Each brand is contained within its own package; you can easily import that package to use it.
+Each brand is contained within its own struct.
 
 ```go
 
-import "github.com/solarlune/egpbc/microsoft"
+import "github.com/solarlune/egpbc"
 
 func main() {
 
-    // Each brand has its own Constants struct that contains its button and axis 
-    // constants and directions; this is done to make syntactic sugar possible / easy to manage
+    // Each brand has its own constants struct that contains its button and axis 
+    // constants and directions; this is done to make things easy to manage.
     xbox := egpbc.MicrosoftConstants
 
     if ebiten.IsStandardGamepadButtonPressed(0, xbox.A) {
-
         fmt.Println("The A Button was pressed.")
-
     }
 
     if ebiten.IsStandardGamepad

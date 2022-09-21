@@ -140,6 +140,23 @@ func (cs nintendoConstantDefinition) AxisCodeFromString(axisCode string) ebiten.
 
 }
 
+func (cs nintendoConstantDefinition) StringFromAxisCode(axisCode ebiten.StandardGamepadAxis) string {
+
+	switch axisCode {
+	case cs.LeftStickX:
+		return "Left Stick X"
+	case cs.LeftStickY:
+		return "Left Stick Y"
+	case cs.RightStickX:
+		return "Right Stick X"
+	case cs.RightStickY:
+		return "Right Stick Y"
+	}
+
+	return ""
+
+}
+
 var NintendoConstants = nintendoConstantDefinition{
 	A:          ebiten.StandardGamepadButtonRightRight,
 	B:          ebiten.StandardGamepadButtonRightBottom,

@@ -54,6 +54,8 @@ func (cs sonyConstantDefinition) ButtonCodeFromString(buttonCode string) ebiten.
 	case "Create":
 		return cs.Create
 	case "Home":
+		fallthrough
+	case "PS":
 		return cs.PS
 	case "D-Pad Up":
 		return cs.DPadUp
@@ -140,6 +142,23 @@ func (cs sonyConstantDefinition) AxisCodeFromString(axisCode string) ebiten.Stan
 	}
 
 	return -1
+
+}
+
+func (cs sonyConstantDefinition) StringFromAxisCode(axisCode ebiten.StandardGamepadAxis) string {
+
+	switch axisCode {
+	case cs.LeftStickX:
+		return "Left Stick X"
+	case cs.LeftStickY:
+		return "Left Stick Y"
+	case cs.RightStickX:
+		return "Right Stick X"
+	case cs.RightStickY:
+		return "Right Stick Y"
+	}
+
+	return ""
 
 }
 

@@ -50,6 +50,8 @@ func (cs microsoftConstantDefinition) ButtonCodeFromString(buttonCode string) eb
 		fallthrough
 	case "View":
 		return cs.View
+	case "Home":
+		fallthrough
 	case "Xbox":
 		return cs.Xbox
 	case "D-Pad Up":
@@ -137,6 +139,23 @@ func (cs microsoftConstantDefinition) AxisCodeFromString(axisCode string) ebiten
 	}
 
 	return -1
+
+}
+
+func (cs microsoftConstantDefinition) StringFromAxisCode(axisCode ebiten.StandardGamepadAxis) string {
+
+	switch axisCode {
+	case cs.LeftStickX:
+		return "Left Stick X"
+	case cs.LeftStickY:
+		return "Left Stick Y"
+	case cs.RightStickX:
+		return "Right Stick X"
+	case cs.RightStickY:
+		return "Right Stick Y"
+	}
+
+	return ""
 
 }
 
