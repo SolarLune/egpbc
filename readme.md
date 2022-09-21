@@ -4,6 +4,12 @@ egpbc is named constants for Nintendo, Sony, and Xbox game console controllers f
 
 (And so, egpbc stands for Ebitengine GamePad Button Constants.)
 
+# Why?
+
+Because this is easier to conceptualize than using ebitengine's built-in gamepad constants, and it should be consistent regardless of what
+brand of controller you or your players use, as long as they're capable of being internally mapped to a standard gamepad device. In other
+words, this should mean that you can use Xbox constants while developing and the player should be able to use a PS5 controller without issue.
+
 # How to install
 
 `go get github.com/solarlune/egpbc`
